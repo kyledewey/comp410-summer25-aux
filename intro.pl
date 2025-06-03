@@ -29,4 +29,49 @@ isWarm(pizza).
 isWarm(burger).
 isWarm(burrito).
 
-% FOR NEXT TIME: finish going through 3 - 5
+%% aliceLikesFood(pizza).
+%% aliceLikesFood(burger).
+%% aliceLikesFood(burrito).
+%% aliceLikesFood(yogurt).
+
+%% bobLikesFood(pizza).
+%% bobLikesFood(burger).
+%% bobLikesFood(salad).
+%% bobLikesFood(milk).
+
+likesFood(alice, pizza).
+likesFood(alice, burger).
+likesFood(alice, burrito).
+likesFood(alice, yogurt).
+likesFood(bob, pizza).
+likesFood(bob, burger).
+likesFood(bob, salad).
+likesFood(bob, milk).
+likesFood(bill, Y) :-
+    isWarm(Y).
+%% likesFood(X, Y) :- % equivalent
+%%     X = bill,
+%%     servedWarm(Y).
+likesFood(janet, X) :-
+    likesFood(alice, X),
+    likesFood(bob, X).
+likesFood(mel, yogurt).
+likesFood(mel, X) :-
+    likesFood(janet, X).
+%% likesFood(mel, X) :-
+%%     (X = yogurt; likesFood(janet, X)).
+
+%% likesFood(..., ...) :-
+%%     ...
+
+bothServedWarm(X, Y) :-
+    servedWarm(X),
+    servedWarm(Y).
+
+% determine if input X is between 7 and 10
+% inclusive range
+between7and10(X) :-
+    X >= 7,
+    X =< 10.
+
+% FOR TOMORROW: all unification all the time
