@@ -23,7 +23,7 @@ areEqual(X, X).
 % - Numbers
 % - Atoms (basically strings)
 % - Variables
-% - (structures)
+% - Structures
 
 isWarm(pizza).
 isWarm(burger).
@@ -73,5 +73,3 @@ bothServedWarm(X, Y) :-
 between7and10(X) :-
     X >= 7,
     X =< 10.
-
-% FOR TOMORROW: all unification all the time
