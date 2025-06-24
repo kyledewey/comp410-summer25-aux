@@ -75,3 +75,5 @@ myLengthLenUninstantiated([], 0).
 myLengthLenUninstantiated([_|Rest], Len) :-
     myLengthLenUninstantiated(Rest, RestLen),
     Len is RestLen + 1.
+
+    
